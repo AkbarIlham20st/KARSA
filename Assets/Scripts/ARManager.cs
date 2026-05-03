@@ -2,135 +2,158 @@
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems; // ✅ WAJIB: Untuk mendeteksi jari menyentuh tombol UI
 
 public class ARManager : MonoBehaviour
 {
-    [Header("=== PENGATURAN AR ===")]
+    [Header("Pengaturan AR")]
     public ARRaycastManager raycastManager;
-    private GameObject spawnedObject;
-    private GameObject selectedPrefab; // Menyimpan memori hewan apa yang dipilih dari menu
 
-    [Header("=== PENGATURAN UI ===")]
+    [Header("Pengaturan UI")]
     public GameObject panelMenuHewan;
-    public GameObject panelInfoSatwa;
+    public GameObject panelInfo;
 
-    // Tempat menyimpan data titik benturan laser (raycast) ke lantai
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private GameObject selectedPrefab;
+    private GameObject spawnedObject;
 
-    // -------------------------------------------------------------------
-    // FUNGSI UTAMA AR: DETEKSI KETUKAN KE LANTAI (Tap to Place)
-    // -------------------------------------------------------------------
+    // Variabel untuk menampung pesan debug di layar HP
+    private string teksDebugLayar = "Status: Menunggu pilihan satwa...";
+
+    void Start()
+    {
+        if (raycastManager == null)
+        {
+            raycastManager = GetComponent<ARRaycastManager>();
+        }
+    }
+
     void Update()
     {
-        if (Input.touchCount > 0)
+        // Deteksi tap di HP (atau klik di laptop)
+        if (Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
         {
-            Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            // Cek apakah jari menyentuh tombol UI
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
             {
-                Debug.Log("Layar disentuh!"); // Pesan 1: Jari terdeteksi
+                teksDebugLayar = "Tap diblokir: Jari menyentuh Tombol/UI.";
+                Debug.Log(teksDebugLayar); // Muncul di layar HP dan Console Unity
+                return;
+            }
 
-                if (raycastManager.Raycast(touch.position, hits, TrackableType.Planes))
+            Vector2 kordinatSentuhan = Pointer.current.position.ReadValue();
+
+            // Cek apakah Mas sudah memilih hewan dari menu
+            if (selectedPrefab == null)
+            {
+                teksDebugLayar = "Tap masuk! Tapi Mas belum memilih satwa dari menu.";
+                Debug.Log(teksDebugLayar);
+                return;
+            }
+
+            if (raycastManager != null)
+            {
+                // Cek apakah tap mengenai jaring lantai AR
+                if (raycastManager.Raycast(kordinatSentuhan, hits, TrackableType.Planes))
                 {
-                    Debug.Log("Lantai kena tembak!"); // Pesan 2: Lantai terdeteksi laser
+                    teksDebugLayar = "SUKSES: Lantai tertembak! Memunculkan satwa...";
+                    Debug.Log(teksDebugLayar);
 
-                    if (selectedPrefab != null)
-                    {
-                        Debug.Log("Mencoba memunculkan: " + selectedPrefab.name); // Pesan 3: Nama hewan ada
+                    Handheld.Vibrate();
+                    Pose hitPose = hits[0].pose;
 
-                        Pose hitPose = hits[0].pose;
-                        if (spawnedObject == null)
-                        {
-                            spawnedObject = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
-                        }
-                        else
-                        {
-                            spawnedObject.transform.position = hitPose.position;
-                        }
-                    }
-                    else
+                    if (spawnedObject != null)
                     {
-                        Debug.Log("Error: Anda belum pilih hewan dari menu!");
+                        Destroy(spawnedObject);
                     }
+
+                    // 1. MUNCULKAN HEWANNYA
+                    spawnedObject = Instantiate(selectedPrefab, hitPose.position, hitPose.rotation);
+
+                    // 2. MUNCULKAN KUBUS PENDAMPING (Sebagai pelacak posisi)
+                    GameObject kubusPelacak = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                    kubusPelacak.transform.position = hitPose.position;
+                    kubusPelacak.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f); // Ukuran 20cm
+
+                    // Kubusnya akan hancur sendiri setelah 5 detik agar tidak mengotori lantai
+                    Destroy(kubusPelacak, 5f);
                 }
                 else
                 {
-                    Debug.Log("Gagal: Laser tidak mengenai lantai AR.");
+                    teksDebugLayar = "GAGAL MUNCUL: Jaring lantai belum kuat di titik tap tersebut.";
+                    Debug.Log(teksDebugLayar);
                 }
             }
         }
     }
 
-    // -------------------------------------------------------------------
-    // FUNGSI MEMILIH HEWAN (Dipanggil dari 33 Tombol Menu)
-    // -------------------------------------------------------------------
+    // Fungsi sakti untuk memunculkan teks debug langsung di pojok layar HP
+    void OnGUI()
+    {
+        GUIStyle style = new GUIStyle();
+        style.fontSize = 40; // Ukuran huruf agar terlihat jelas di HP
+        style.normal.textColor = Color.green; // Warna hijau
+        style.fontStyle = FontStyle.Bold;
+
+        // Memunculkan tulisan di pojok kiri atas
+        GUI.Label(new Rect(40, 40, 1000, 200), teksDebugLayar, style);
+    }
+
+    // =======================================================
+    // FUNGSI UNTUK TOMBOL-TOMBOL UI (VERSI SAKLAR)
+    // =======================================================
+
     public void PilihHewan(string namaHewan)
     {
-        // Mencari file hewan di dalam folder Resources
         selectedPrefab = Resources.Load<GameObject>(namaHewan);
 
-        // --- TRIK DETEKTIF GETAR ---
-        if (selectedPrefab != null)
-        {
-            // Jika hewannya BERHASIL ditemukan, HP akan bergetar pendek!
-            Handheld.Vibrate();
-        }
-        // ---------------------------
+        // Update pesan debug saat hewan dipilih
+        teksDebugLayar = "Satwa dipilih: " + namaHewan + ". Silakan tap lantai AR!";
+        Debug.Log(teksDebugLayar);
 
-        // Menutup menu panel
         if (panelMenuHewan != null)
         {
             panelMenuHewan.SetActive(false);
         }
     }
 
-    // -------------------------------------------------------------------
-    // FUNGSI ANIMASI (Dipakai di Tombol Kanan)
-    // -------------------------------------------------------------------
-    public void AnimasiJalan()
-    {
-        if (spawnedObject != null)
-        {
-            // ✅ PERBAIKAN BUG: Gunakan GetComponentInChildren
-            Animator anim = spawnedObject.GetComponentInChildren<Animator>();
-            if (anim != null) anim.SetBool("IsWalking", true);
-        }
-    }
-
-    public void AnimasiDiam()
-    {
-        if (spawnedObject != null)
-        {
-            Animator anim = spawnedObject.GetComponentInChildren<Animator>();
-            if (anim != null) anim.SetBool("IsWalking", false);
-        }
-    }
-
-    // -------------------------------------------------------------------
-    // FUNGSI TOGGLE MENU (Tetap Sama)
-    // -------------------------------------------------------------------
-    public void ToggleDaftarHewan()
+    public void BukaMenuHewan()
     {
         if (panelMenuHewan != null)
         {
-            bool status = panelMenuHewan.activeSelf;
-            panelMenuHewan.SetActive(!status);
-            if (!status && panelInfoSatwa != null) panelInfoSatwa.SetActive(false);
+            panelMenuHewan.SetActive(!panelMenuHewan.activeSelf);
+
+            if (panelInfo != null && panelMenuHewan.activeSelf)
+            {
+                panelInfo.SetActive(false);
+            }
         }
     }
 
-    public void ToggleInfoSatwa()
+    public void BukaInfo()
     {
-        if (panelInfoSatwa != null)
+        if (panelInfo != null)
         {
-            bool status = panelInfoSatwa.activeSelf;
-            panelInfoSatwa.SetActive(!status);
-            if (!status && panelMenuHewan != null) panelMenuHewan.SetActive(false);
+            panelInfo.SetActive(!panelInfo.activeSelf);
+
+            if (panelMenuHewan != null && panelInfo.activeSelf)
+            {
+                panelMenuHewan.SetActive(false);
+            }
         }
     }
 
-    public void TombolBack()
+    public void TutupInfo()
+    {
+        if (panelInfo != null)
+        {
+            panelInfo.SetActive(false);
+        }
+    }
+
+    public void TombolKembali()
     {
         SceneManager.LoadScene("MainMenu");
     }
