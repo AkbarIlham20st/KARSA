@@ -39,7 +39,7 @@ public class ARManager : MonoBehaviour
             if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
             {
                 teksDebugLayar = "Tap diblokir: Jari menyentuh Tombol/UI.";
-                Debug.Log(teksDebugLayar); // Muncul di layar HP dan Console Unity
+                Debug.Log(teksDebugLayar);
                 return;
             }
 
@@ -75,9 +75,9 @@ public class ARManager : MonoBehaviour
                     // 2. MUNCULKAN KUBUS PENDAMPING (Sebagai pelacak posisi)
                     GameObject kubusPelacak = GameObject.CreatePrimitive(PrimitiveType.Cube);
                     kubusPelacak.transform.position = hitPose.position;
-                    kubusPelacak.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f); // Ukuran 20cm
+                    kubusPelacak.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 
-                    // Kubusnya akan hancur sendiri setelah 5 detik agar tidak mengotori lantai
+                    // Kubusnya akan hancur sendiri setelah 5 detik
                     Destroy(kubusPelacak, 5f);
                 }
                 else
@@ -89,34 +89,27 @@ public class ARManager : MonoBehaviour
         }
     }
 
-    // Fungsi sakti untuk memunculkan teks debug langsung di pojok layar HP
     void OnGUI()
     {
         GUIStyle style = new GUIStyle();
-        style.fontSize = 40; // Ukuran huruf agar terlihat jelas di HP
-        style.normal.textColor = Color.green; // Warna hijau
+        style.fontSize = 40;
+        style.normal.textColor = Color.green;
         style.fontStyle = FontStyle.Bold;
 
-        // Memunculkan tulisan di pojok kiri atas
         GUI.Label(new Rect(40, 40, 1000, 200), teksDebugLayar, style);
     }
 
     // =======================================================
-    // FUNGSI UNTUK TOMBOL-TOMBOL UI (VERSI SAKLAR)
+    // FUNGSI UNTUK MENU DAN INFO
     // =======================================================
 
     public void PilihHewan(string namaHewan)
     {
         selectedPrefab = Resources.Load<GameObject>(namaHewan);
-
-        // Update pesan debug saat hewan dipilih
         teksDebugLayar = "Satwa dipilih: " + namaHewan + ". Silakan tap lantai AR!";
         Debug.Log(teksDebugLayar);
 
-        if (panelMenuHewan != null)
-        {
-            panelMenuHewan.SetActive(false);
-        }
+        if (panelMenuHewan != null) panelMenuHewan.SetActive(false);
     }
 
     public void BukaMenuHewan()
@@ -124,11 +117,7 @@ public class ARManager : MonoBehaviour
         if (panelMenuHewan != null)
         {
             panelMenuHewan.SetActive(!panelMenuHewan.activeSelf);
-
-            if (panelInfo != null && panelMenuHewan.activeSelf)
-            {
-                panelInfo.SetActive(false);
-            }
+            if (panelInfo != null && panelMenuHewan.activeSelf) panelInfo.SetActive(false);
         }
     }
 
@@ -137,24 +126,78 @@ public class ARManager : MonoBehaviour
         if (panelInfo != null)
         {
             panelInfo.SetActive(!panelInfo.activeSelf);
-
-            if (panelMenuHewan != null && panelInfo.activeSelf)
-            {
-                panelMenuHewan.SetActive(false);
-            }
+            if (panelMenuHewan != null && panelInfo.activeSelf) panelMenuHewan.SetActive(false);
         }
     }
 
     public void TutupInfo()
     {
-        if (panelInfo != null)
-        {
-            panelInfo.SetActive(false);
-        }
+        if (panelInfo != null) panelInfo.SetActive(false);
     }
 
     public void TombolKembali()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    // =======================================================
+    // FUNGSI BARU: PENGENDALI ANIMASI HEWAN DENGAN DEBUG
+    // =======================================================
+
+    public void AnimasiJalan()
+    {
+        // 1. Cek apakah fungsi ini terpanggil saat tombol ditekan
+        teksDebugLayar = "Fungsi AnimasiJalan terpanggil!";
+        Debug.Log(teksDebugLayar);
+
+        // 2. Cek apakah hewannya ada di layar
+        if (spawnedObject != null)
+        {
+            // 3. Cari komponen Animator
+            Animator anim = spawnedObject.GetComponentInChildren<Animator>();
+            if (anim != null)
+            {
+                anim.SetBool("IsWalk", true);
+                teksDebugLayar = "SUKSES: Perintah JALAN dikirim ke Animator!";
+                Debug.Log(teksDebugLayar);
+            }
+            else
+            {
+                teksDebugLayar = "GAGAL: Hewan ada, tapi komponen Animator tidak ditemukan!";
+                Debug.Log(teksDebugLayar);
+            }
+        }
+        else
+        {
+            teksDebugLayar = "GAGAL: Hewan belum di-spawn / spawnedObject KOSONG!";
+            Debug.Log(teksDebugLayar);
+        }
+    }
+
+    public void AnimasiDiam()
+    {
+        teksDebugLayar = "Fungsi AnimasiDiam terpanggil!";
+        Debug.Log(teksDebugLayar);
+
+        if (spawnedObject != null)
+        {
+            Animator anim = spawnedObject.GetComponentInChildren<Animator>();
+            if (anim != null)
+            {
+                anim.SetBool("IsWalk", false);
+                teksDebugLayar = "SUKSES: Perintah DIAM dikirim ke Animator!";
+                Debug.Log(teksDebugLayar);
+            }
+            else
+            {
+                teksDebugLayar = "GAGAL: Hewan ada, tapi komponen Animator tidak ditemukan!";
+                Debug.Log(teksDebugLayar);
+            }
+        }
+        else
+        {
+            teksDebugLayar = "GAGAL: Hewan belum di-spawn / spawnedObject KOSONG!";
+            Debug.Log(teksDebugLayar);
+        }
     }
 }
