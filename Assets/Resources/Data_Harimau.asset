@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8952074275bbabf4eb999a6de32a5495, type: 3}
+  m_Name: Data_Harimau
+  m_EditorClassIdentifier: Assembly-CSharp::DataHewan
+  namaHewan: Harimau
+  tinggi: "70\u2013120 cm"
+  berat: "90\u2013300 kg"
+  habitat: Hutan tropis dan savana
+  asal: Asia
+  makanan: Karnivora (daging)
+  deskripsi: Harimau adalah kucing besar dengan loreng khas dan kemampuan berburu
+    yang sangat baik.

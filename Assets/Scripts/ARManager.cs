@@ -16,6 +16,7 @@ public class ARManager : MonoBehaviour
     public GameObject panelInfo;
 
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    public InfoSatwaManager infoSatwaManager;
     private GameObject selectedPrefab;
     private GameObject spawnedObject;
 
@@ -103,13 +104,35 @@ public class ARManager : MonoBehaviour
     // FUNGSI UNTUK MENU DAN INFO
     // =======================================================
 
+    //public void PilihHewan(string namaHewan)
+    //{
+    //    selectedPrefab = Resources.Load<GameObject>(namaHewan);
+    //    teksDebugLayar = "Satwa dipilih: " + namaHewan + ". Silakan tap lantai AR!";
+    //    Debug.Log(teksDebugLayar);
+
+    //    if (panelMenuHewan != null) panelMenuHewan.SetActive(false);
+    //}
+
     public void PilihHewan(string namaHewan)
     {
         selectedPrefab = Resources.Load<GameObject>(namaHewan);
+
+        // Memanggil data dari folder Resources
+        DataHewan dataNya = Resources.Load<DataHewan>("Data_" + namaHewan);
+
+        // GANTI BAGIAN INI: Pastikan namanya TampilkanInfo, bukan IsiDataKePanel
+        if (dataNya != null && infoSatwaManager != null)
+        {
+            infoSatwaManager.TampilkanInfo(dataNya);
+        }
+
         teksDebugLayar = "Satwa dipilih: " + namaHewan + ". Silakan tap lantai AR!";
         Debug.Log(teksDebugLayar);
 
-        if (panelMenuHewan != null) panelMenuHewan.SetActive(false);
+        if (panelMenuHewan != null)
+        {
+            panelMenuHewan.SetActive(false);
+        }
     }
 
     public void BukaMenuHewan()
@@ -141,63 +164,47 @@ public class ARManager : MonoBehaviour
     }
 
     // =======================================================
-    // FUNGSI BARU: PENGENDALI ANIMASI HEWAN DENGAN DEBUG
+    // FUNGSI BARU: PENGENDALI ANIMASI (JURUS SAPU JAGAT)
     // =======================================================
 
     public void AnimasiJalan()
     {
-        // 1. Cek apakah fungsi ini terpanggil saat tombol ditekan
-        teksDebugLayar = "Fungsi AnimasiJalan terpanggil!";
-        Debug.Log(teksDebugLayar);
-
-        // 2. Cek apakah hewannya ada di layar
         if (spawnedObject != null)
         {
-            // 3. Cari komponen Animator
             Animator anim = spawnedObject.GetComponentInChildren<Animator>();
             if (anim != null)
             {
-                anim.SetBool("IsWalk", true);
-                teksDebugLayar = "SUKSES: Perintah JALAN dikirim ke Animator!";
+                anim.SetBool("IsWalking", true);
+
+                // DETEKTIF: Baca ulang otaknya, apakah beneran berubah jadi True?
+                bool statusWalk = anim.GetBool("IsWalking");
+                teksDebugLayar = "Status Jalan di Otak Anoa: " + statusWalk.ToString();
                 Debug.Log(teksDebugLayar);
             }
-            else
-            {
-                teksDebugLayar = "GAGAL: Hewan ada, tapi komponen Animator tidak ditemukan!";
-                Debug.Log(teksDebugLayar);
-            }
-        }
-        else
-        {
-            teksDebugLayar = "GAGAL: Hewan belum di-spawn / spawnedObject KOSONG!";
-            Debug.Log(teksDebugLayar);
         }
     }
 
     public void AnimasiDiam()
     {
-        teksDebugLayar = "Fungsi AnimasiDiam terpanggil!";
-        Debug.Log(teksDebugLayar);
-
         if (spawnedObject != null)
         {
-            Animator anim = spawnedObject.GetComponentInChildren<Animator>();
-            if (anim != null)
+            Animator[] semuaAnim = spawnedObject.GetComponentsInChildren<Animator>();
+            bool adaYangMerespon = false;
+
+            foreach (Animator anim in semuaAnim)
             {
-                anim.SetBool("IsWalk", false);
-                teksDebugLayar = "SUKSES: Perintah DIAM dikirim ke Animator!";
+                if (anim.runtimeAnimatorController != null)
+                {
+                    anim.SetBool("IsWalking", false);
+                    adaYangMerespon = true;
+                }
+            }
+
+            if (adaYangMerespon)
+            {
+                teksDebugLayar = "SUKSES: Semua otot berhenti (DIAM)!";
                 Debug.Log(teksDebugLayar);
             }
-            else
-            {
-                teksDebugLayar = "GAGAL: Hewan ada, tapi komponen Animator tidak ditemukan!";
-                Debug.Log(teksDebugLayar);
-            }
-        }
-        else
-        {
-            teksDebugLayar = "GAGAL: Hewan belum di-spawn / spawnedObject KOSONG!";
-            Debug.Log(teksDebugLayar);
         }
     }
 }
