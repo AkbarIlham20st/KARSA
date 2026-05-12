@@ -20,3 +20,4 @@ MonoBehaviour:
   makanan: Herbivora (rumput, buah-buahan, dan dedaunan)
   deskripsi: Kijang adalah hewan lincah dengan tubuh ramping dan tanduk kecil pada
     jantan.
+  suaraHewan: {fileID: 8300000, guid: c20b755b9b393b745b496b6bf885db82, type: 3}

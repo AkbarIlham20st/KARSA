@@ -20,3 +20,4 @@ MonoBehaviour:
   makanan: Rumput, dedaunan, tebu, tunas, ranting muda, bunga, dan buah-buahan
   deskripsi: Banteng atau tembadau adalah spesies hewan yang sekerabat dengan sapi
     dan ditemukan di berbagai wilayah Asia Tenggara
+  suaraHewan: {fileID: 8300000, guid: bb9b2b26d9b158f4295cc57f0e760982, type: 3}

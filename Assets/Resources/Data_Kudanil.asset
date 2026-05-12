@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Afrika
   makanan: Herbivora (buah-buahan)
   deskripsi: "Kudanil adalah mamalia semiakuatik dengan tubuh besar dan mulut lebar.\t"
+  suaraHewan: {fileID: 8300000, guid: 9e98bb41257b92b48acab251eef0a7e3, type: 3}

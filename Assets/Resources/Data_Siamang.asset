@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Sumatra dan Malaysia
   makanan: Herbivora (buah dan daun)
   deskripsi: Siamang adalah jenis owa terbesar dengan kantung suara besar untuk berkomunikasi.
+  suaraHewan: {fileID: 8300000, guid: d258edaf77864bf4b86c0512ce7d7154, type: 3}

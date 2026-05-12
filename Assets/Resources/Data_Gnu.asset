@@ -20,3 +20,4 @@ MonoBehaviour:
   makanan: Herbivora (rumput)
   deskripsi: Gnu dikenal sebagai wildebeest, hewan berkuku yang hidup bermigrasi
     dalam kawanan besar.
+  suaraHewan: {fileID: 8300000, guid: a809f53dc0157f746bc416d4af129b08, type: 3}

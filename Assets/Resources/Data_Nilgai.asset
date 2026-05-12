@@ -20,3 +20,4 @@ MonoBehaviour:
   makanan: Herbivora (rumput dan dedaunan)
   deskripsi: Nilgai adalah antelop terbesar di Asia dengan warna tubuh kebiruan pada
     jantan.
+  suaraHewan: {fileID: 8300000, guid: 467bfc8a31900e440924be331f82cc49, type: 3}

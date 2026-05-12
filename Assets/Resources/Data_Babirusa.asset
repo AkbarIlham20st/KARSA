@@ -22,3 +22,4 @@ MonoBehaviour:
     ini memiliki taring panjang yang mencuat dan melengkung di atas moncongnya. Babi
     rusa hidup berkelompok di daerah rawa-rawa dan semak-semak. Mereka aktif mencari
     makan pada malam hari dan beristirahat pada siang hari.
+  suaraHewan: {fileID: 8300000, guid: b4a372247af939242997be29e83e13b0, type: 3}

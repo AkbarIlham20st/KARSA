@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Asia dan Eropa
   makanan: Herbivora (rumput, buah-buahan, dan dedaunan)
   deskripsi: Kambing gunung memiliki kemampuan memanjat tebing yang sangat baik.
+  suaraHewan: {fileID: 8300000, guid: 475f52ac2a5b7f14690ffeb0e21f162e, type: 3}

@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Asia Selatan
   makanan: Herbivora (rumput, dedaunan, buah)
   deskripsi: Rusa tutul memiliki pola bintik putih yang khas pada tubuhnya.
+  suaraHewan: {fileID: 8300000, guid: e37bfbec86a5c5b408a83910b86d96c5, type: 3}

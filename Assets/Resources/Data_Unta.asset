@@ -20,3 +20,4 @@ MonoBehaviour:
   makanan: Herbivora
   deskripsi: Unta memiliki punuk yang berfungsi menyimpan cadangan energi dan tahan
     hidup di gurun.
+  suaraHewan: {fileID: 8300000, guid: 6c4edb05bee2a814b900c4a49540cdfb, type: 3}

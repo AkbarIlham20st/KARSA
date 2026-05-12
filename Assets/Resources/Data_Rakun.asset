@@ -20,3 +20,4 @@ MonoBehaviour:
   makanan: Omnivora
   deskripsi: Rakun memiliki topeng hitam khas di wajah dan sangat pandai mencari
     makanan.
+  suaraHewan: {fileID: 8300000, guid: 1e1552a0e3a37d841993828668579bac, type: 3}

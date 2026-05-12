@@ -21,3 +21,4 @@ MonoBehaviour:
   deskripsi: Bekantan, kahau, kera belanda atau monyet belanda adalah jenis monyet
     berhidung panjang dengan rambut berwarna hitam kemerahan. Bekantan merupakan
     hewan endemik pulau Kalimantan yang tersebar di hutan, rawa dan hutan pantai.
+  suaraHewan: {fileID: 8300000, guid: faf7c59b488e500409b9d330cc269269, type: 3}

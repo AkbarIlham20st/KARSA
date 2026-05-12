@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Indonesia dan Malaysia
   makanan: Omnivora (buah, daun, serangga)
   deskripsi: Orang utan adalah primata besar yang terkenal cerdas dan hidup di pepohonan.
+  suaraHewan: {fileID: 8300000, guid: 6d559b2da095d924ab08ab7b617fbf60, type: 3}

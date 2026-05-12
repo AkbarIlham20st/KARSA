@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Madagaskar
   makanan: Omnivora (buah, daun, serangga)
   deskripsi: Lemur adalah primata unik yang hanya banyak ditemukan di Madagaskar.
+  suaraHewan: {fileID: 8300000, guid: 6f3674a2c963f034a8c3d15556375357, type: 3}

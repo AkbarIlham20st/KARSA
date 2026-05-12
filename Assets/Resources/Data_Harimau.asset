@@ -20,3 +20,4 @@ MonoBehaviour:
   makanan: Karnivora (daging)
   deskripsi: Harimau adalah kucing besar dengan loreng khas dan kemampuan berburu
     yang sangat baik.
+  suaraHewan: {fileID: 8300000, guid: ede7a61230a5352409a5fa9aef1e0f14, type: 3}

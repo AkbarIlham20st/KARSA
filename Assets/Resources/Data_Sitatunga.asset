@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Afrika
   makanan: Herbivora (buah dan daun)
   deskripsi: Sitatunga adalah antelop rawa dengan kuku khusus untuk berjalan di lumpur.
+  suaraHewan: {fileID: 8300000, guid: e91bea1de77c0ca47b1f2d240ed6930d, type: 3}

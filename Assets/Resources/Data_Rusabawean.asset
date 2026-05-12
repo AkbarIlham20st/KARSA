@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Pulau Bawean, Indonesia
   makanan: Herbivora (rumput, buah)
   deskripsi: Rusa Bawean adalah rusa langka endemik Indonesia yang berukuran kecil.
+  suaraHewan: {fileID: 8300000, guid: a4cb7756ce0eb5a4092f87ce48810952, type: 3}

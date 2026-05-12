@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Eropa dan Asia Barat
   makanan: Herbivora (rumput, buah-buahan, dan dedaunan)
   deskripsi: Muflon adalah domba liar dengan tanduk melingkar besar pada jantan.
+  suaraHewan: {fileID: 8300000, guid: 521988f7396a4414babac7754c7e6efa, type: 3}

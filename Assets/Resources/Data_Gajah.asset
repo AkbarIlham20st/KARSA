@@ -20,3 +20,4 @@ MonoBehaviour:
   makanan: Herbivora (rumput, daun, buah)
   deskripsi: Gajah adalah mamalia darat terbesar yang memiliki belalai panjang dan
     kecerdasan tinggi.
+  suaraHewan: {fileID: 8300000, guid: 27598bc85da06374d90557ddbe3cfbae, type: 3}

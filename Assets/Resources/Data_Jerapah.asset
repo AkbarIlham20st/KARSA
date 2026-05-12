@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Afrika
   makanan: Herbivora (daun akasia)
   deskripsi: Jerapah adalah hewan tertinggi di dunia dengan leher panjang yang khas.
+  suaraHewan: {fileID: 8300000, guid: 5528efbc2de27634e98cae90a646f198, type: 3}

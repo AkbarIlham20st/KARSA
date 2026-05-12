@@ -19,3 +19,4 @@ MonoBehaviour:
   asal: Asia, Afrika, Amerika
   makanan: Omnivora (buah, daun, serangga)
   deskripsi: Monyet adalah primata cerdas yang hidup berkelompok dan aktif di pepohonan.
+  suaraHewan: {fileID: 8300000, guid: ea49c7141fecc664884d68903ae21e71, type: 3}
