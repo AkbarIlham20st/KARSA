@@ -18,5 +18,5 @@ MonoBehaviour:
   habitat: Hutan dan padang rumput
   asal: Asia Selatan
   makanan: Herbivora (rumput, dedaunan, buah)
-  deskripsi: Rusa tutul memiliki pola bintik putih yang khas pada tubuhnya.
+  deskripsi: Rusa tutul memiliki bintik putih cantik di tubuhnya seperti pola tutul.
   suaraHewan: {fileID: 8300000, guid: e37bfbec86a5c5b408a83910b86d96c5, type: 3}

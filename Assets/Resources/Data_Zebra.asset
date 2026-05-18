@@ -18,5 +18,6 @@ MonoBehaviour:
   habitat: Savana
   asal: Afrika
   makanan: Herbivora (rumput dan daun)
-  deskripsi: Zebra terkenal dengan pola belang hitam putih unik pada tubuhnya.
+  deskripsi: Zebra adalah hewan bergaris hitam putih yang hidup di padang rumput
+    Afrika.
   suaraHewan: {fileID: 8300000, guid: 472b94c5112df7f438ccbfa59072016f, type: 3}

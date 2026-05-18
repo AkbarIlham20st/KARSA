@@ -18,6 +18,8 @@ MonoBehaviour:
   habitat: Hutan Bambu dan Padang Rumput
   asal: Asia Tenggara
   makanan: Rumput, dedaunan, tebu, tunas, ranting muda, bunga, dan buah-buahan
-  deskripsi: Banteng atau tembadau adalah spesies hewan yang sekerabat dengan sapi
-    dan ditemukan di berbagai wilayah Asia Tenggara
+  deskripsi: Banteng adalah kerabat dekat sapi yang bertubuh besar, berotot, dan
+    kuat. Hewan herbivora ini dikenal suka berkumpul dan memiliki ciri khas yang
+    unik, seperti bercak putih di bagian pantat dan kaki yang tampak seperti memakai
+    kaos kaki putih.
   suaraHewan: {fileID: 8300000, guid: bb9b2b26d9b158f4295cc57f0e760982, type: 3}

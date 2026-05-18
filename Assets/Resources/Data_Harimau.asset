@@ -18,6 +18,5 @@ MonoBehaviour:
   habitat: Hutan tropis dan savana
   asal: Asia
   makanan: Karnivora (daging)
-  deskripsi: Harimau adalah kucing besar dengan loreng khas dan kemampuan berburu
-    yang sangat baik.
+  deskripsi: Harimau adalah kucing besar bercorak loreng yang pandai berburu di hutan.
   suaraHewan: {fileID: 8300000, guid: ede7a61230a5352409a5fa9aef1e0f14, type: 3}

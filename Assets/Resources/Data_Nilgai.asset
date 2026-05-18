@@ -18,6 +18,5 @@ MonoBehaviour:
   habitat: Padang rumput dan semak
   asal: India
   makanan: Herbivora (rumput dan dedaunan)
-  deskripsi: Nilgai adalah antelop terbesar di Asia dengan warna tubuh kebiruan pada
-    jantan.
+  deskripsi: Nilgai adalah antelop besar dari India yang suka hidup di padang rumput.
   suaraHewan: {fileID: 8300000, guid: 467bfc8a31900e440924be331f82cc49, type: 3}

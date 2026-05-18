@@ -15,6 +15,9 @@ public class ARManager : MonoBehaviour
     public GameObject panelMenuHewan;
     public GameObject panelInfo;
 
+    [Header("Pengaturan Scene")]
+    public string namaSceneKembali;
+
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
     public InfoSatwaManager infoSatwaManager;
     private GameObject selectedPrefab;
@@ -110,7 +113,7 @@ public class ARManager : MonoBehaviour
 
     public void TombolKembali()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(namaSceneKembali);
     }
 
     public void AnimasiJalan()

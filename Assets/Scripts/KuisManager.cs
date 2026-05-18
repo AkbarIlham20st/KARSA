@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -64,8 +64,14 @@ public class KuisManager : MonoBehaviour
 
         teksSoal.text = kuis.soal;
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < tombolPilihan.Length; i++)
         {
+            if (i >= kuis.pilihanJawaban.Length)
+            {
+                Debug.LogError("🚨 ERROR KETEMU: Pada soal '" + kuis.soal + "', ukuran 'Pilihan Jawaban' di Inspector masih kurang dari " + tombolPilihan.Length + "!");
+                continue; 
+            }
+
             teksPilihan[i].text = kuis.pilihanJawaban[i];
 
             int indexTombol = i;

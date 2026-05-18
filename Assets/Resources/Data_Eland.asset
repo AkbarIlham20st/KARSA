@@ -18,6 +18,6 @@ MonoBehaviour:
   habitat: Savana dan padang rumput
   asal: Afrika
   makanan: Herbivora (rumput dan daun)
-  deskripsi: Eland merupakan antelop terbesar di dunia dengan tubuh besar dan tanduk
-    spiral.
+  deskripsi: Eland adalah sapi hutan besar dari Afrika yang memiliki tanduk panjang
+    dan suka makan rumput.
   suaraHewan: {fileID: 8300000, guid: 01296f3543633fe418af83b202de7364, type: 3}

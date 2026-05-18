@@ -18,5 +18,6 @@ MonoBehaviour:
   habitat: Sungai dan rawa
   asal: Afrika
   makanan: Herbivora (buah-buahan)
-  deskripsi: "Kudanil adalah mamalia semiakuatik dengan tubuh besar dan mulut lebar.\t"
+  deskripsi: Kudanil suka berendam di sungai agar tubuhnya tetap dingin saat cuaca
+    panas.
   suaraHewan: {fileID: 8300000, guid: 9e98bb41257b92b48acab251eef0a7e3, type: 3}

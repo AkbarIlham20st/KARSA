@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuPilih.unity
+    guid: bef6a4df3c9b6df46b0184467a94da84
+  - enabled: 1
+    path: Assets/Scenes/MainMenuJunior.unity
+    guid: 1bfa776b1a3dd6547a55894e67337d55
+  - enabled: 1
     path: Assets/Scenes/MainMenuSenior.unity
     guid: 0f7dc11a34a4afe479f496479651e038
+  - enabled: 1
+    path: Assets/Scenes/ARJunior.unity
+    guid: 48c5e29e5690b9b48a4b7e2b140f6574
   - enabled: 1
     path: Assets/Scenes/ARSenior.unity
     guid: 99c9720ab356a0642a771bea13969a05

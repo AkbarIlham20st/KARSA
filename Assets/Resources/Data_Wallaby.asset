@@ -18,6 +18,5 @@ MonoBehaviour:
   habitat: Padang rumput dan hutan
   asal: Australia
   makanan: Herbivora (buah dan umbi)
-  deskripsi: Wallaby adalah marsupial kecil mirip kanguru dengan kemampuan melompat
-    tinggi.
+  deskripsi: Wallaby adalah hewan mirip kanguru kecil yang suka melompat.
   suaraHewan: {fileID: 8300000, guid: a9141f9489e401c4da84d1e449a13c1f, type: 3}

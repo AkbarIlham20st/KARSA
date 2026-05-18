@@ -18,6 +18,6 @@ MonoBehaviour:
   habitat: Hutan dan padang rumput
   asal: Asia dan Afrika
   makanan: Herbivora (rumput, daun, buah)
-  deskripsi: Gajah adalah mamalia darat terbesar yang memiliki belalai panjang dan
-    kecerdasan tinggi.
+  deskripsi: Gajah adalah hewan besar yang memiliki belalai panjang untuk mengambil
+    makanan dan minum air.
   suaraHewan: {fileID: 8300000, guid: 27598bc85da06374d90557ddbe3cfbae, type: 3}

@@ -18,8 +18,6 @@ MonoBehaviour:
   habitat: Hutan Tropis
   asal: Sulawesi dan Maluku
   makanan: buah-buahan, umbi-umbian, daun, jamur, serta serangga
-  deskripsi: Anoa atau kerbau kerdil adalah kerbau endemik yang hidup di daratan
-    Pulau Sulawesi dan Pulau Buton. Banyak yang menyebut anoa sebagai kerbau kerdil.
-    Anoa merupakan hewan yang tergolong fauna peralihan. Anoa merupakan mamalia tergolong
-    dalam famili bovidae yang tersebar hampir di seluruh pulau Sulawesi.
+  deskripsi: Anoa adalah mamalia unik dan langka dari Indonesia yang dijuluki sebagai
+    "kerbau kerdil" karena bentuknya menyerupai kerbau namun berukuran lebih kecil.
   suaraHewan: {fileID: 8300000, guid: c0d37fa2c27a8ef4e8ce6945ec4ae5d7, type: 3}

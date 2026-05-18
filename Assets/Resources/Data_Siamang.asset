@@ -18,5 +18,6 @@ MonoBehaviour:
   habitat: Hutan tropis
   asal: Sumatra dan Malaysia
   makanan: Herbivora (buah dan daun)
-  deskripsi: Siamang adalah jenis owa terbesar dengan kantung suara besar untuk berkomunikasi.
+  deskripsi: Siamang adalah kera berbulu hitam yang bisa bersuara sangat keras di
+    hutan.
   suaraHewan: {fileID: 8300000, guid: d258edaf77864bf4b86c0512ce7d7154, type: 3}

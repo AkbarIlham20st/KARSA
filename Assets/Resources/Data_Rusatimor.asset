@@ -18,5 +18,6 @@ MonoBehaviour:
   habitat: Hutan dan padang rumput
   asal: Jawa, Bali, dan Pulau Timor
   makanan: Herbivora (rumput, dedaunan, buah)Herbivora (rumput, dedaunan, buah)
-  deskripsi: Rusa Timor adalah rusa asli Indonesia yang sering dibudidayakan.
+  deskripsi: Rusa Timor adalah rusa asli Indonesia yang suka hidup di hutan dan padang
+    rumput.
   suaraHewan: {fileID: 8300000, guid: a246e025ec450804f8ea3c9135eef92c, type: 3}

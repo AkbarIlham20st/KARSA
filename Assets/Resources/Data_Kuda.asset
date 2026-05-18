@@ -18,6 +18,6 @@ MonoBehaviour:
   habitat: Padang rumput
   asal: Asia Tengah & Rusia
   makanan: Herbivora (rumput, buah-buahan, dan dedaunan)
-  deskripsi: Kuda merupakan hewan peliharaan yang sering digunakan untuk transportasi
-    dan olahraga.
+  deskripsi: Kuda adalah hewan yang kuat dan sering membantu manusia untuk berkendara
+    atau bekerja.
   suaraHewan: {fileID: 8300000, guid: f1af38a0a1fb3e348887b3bd8b0cc71e, type: 3}

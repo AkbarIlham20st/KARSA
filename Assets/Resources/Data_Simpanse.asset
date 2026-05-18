@@ -18,6 +18,6 @@ MonoBehaviour:
   habitat: Hutan tropis dan savana
   asal: Afrika
   makanan: Omnivora (buah, daun, serangga)
-  deskripsi: Simpanse adalah primata yang sangat cerdas dan memiliki perilaku mirip
-    manusia.
+  deskripsi: Simpanse adalah hewan pintar yang bisa menggunakan alat dan belajar
+    seperti manusia.
   suaraHewan: {fileID: 8300000, guid: 76ff8c61c4d2e0e438dcd20171008744, type: 3}

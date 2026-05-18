@@ -18,6 +18,6 @@ MonoBehaviour:
   habitat: Savana
   asal: Afrika
   makanan: Herbivora (rumput)
-  deskripsi: Gnu dikenal sebagai wildebeest, hewan berkuku yang hidup bermigrasi
-    dalam kawanan besar.
+  deskripsi: Gnu adalah hewan mirip sapi dan kuda yang hidup berkelompok di padang
+    rumput Afrika.
   suaraHewan: {fileID: 8300000, guid: a809f53dc0157f746bc416d4af129b08, type: 3}

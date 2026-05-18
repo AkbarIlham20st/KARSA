@@ -18,5 +18,6 @@ MonoBehaviour:
   habitat: Hutan tropis
   asal: Asia Selatan dan Tenggara
   makanan: Herbivora (rumput, dedaunan, buah)
-  deskripsi: Rusa sambar merupakan rusa besar dengan tanduk bercabang kasar.
+  deskripsi: Rusa sambar memiliki tubuh besar dan tanduk yang kuat untuk melindungi
+    diri.
   suaraHewan: {fileID: 8300000, guid: 3eaa66e3e8b9e0e4ab01a084e42c4943, type: 3}

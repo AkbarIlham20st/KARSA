@@ -19,9 +19,8 @@ MonoBehaviour:
   asal: Amerika Utara, Amerika Selatan, Eurasia, hingga Asia Tenggara
   makanan: Buah-buahan, beri, akar-akaran, tunas muda, kacang-kacangan, serangga
     (terutama semut dan larva), madu, ikan, serta mamalia kecil.
-  deskripsi: Beruang adalah mamalia besar dari familia Ursidae (ordo Carnivora) yang
-    memiliki tubuh kekar, kaki kuat, bulu tebal, serta penciuman dan pendengaran
-    yang tajam. Umumnya omnivora, beruang ditemukan di berbagai habitat di Amerika,
-    Eropa, dan Asia, dengan contoh jenis seperti beruang kutub, beruang cokelat,
-    panda, dan beruang madu.
+  deskripsi: Beruang adalah mamalia berbadan besar, berbulu lebat, dan memiliki cakar
+    yang kuat. Mereka memiliki indra penciuman yang sangat tajam dan dikenal sebagai
+    pemakan segala (omnivora), yang berarti mereka suka memakan daging, madu, ikan,
+    hingga buah-buahan.
   suaraHewan: {fileID: 8300000, guid: 9b39dded36161774682917c22da5e539, type: 3}

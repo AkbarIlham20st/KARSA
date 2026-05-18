@@ -18,6 +18,6 @@ MonoBehaviour:
   habitat: Hutan
   asal: India
   makanan: Karnivora (daging)
-  deskripsi: Harimau putih merupakan variasi warna langka dari harimau Bengal dengan
-    bulu putih dan mata biru.
+  deskripsi: Harimau putih adalah harimau langka yang memiliki bulu putih dan mata
+    indah.
   suaraHewan: {fileID: 8300000, guid: 810b05f78e884f742a2f7b3eeff62566, type: 3}

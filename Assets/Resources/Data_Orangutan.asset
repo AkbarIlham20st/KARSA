@@ -18,5 +18,6 @@ MonoBehaviour:
   habitat: Hutan hujan tropis
   asal: Indonesia dan Malaysia
   makanan: Omnivora (buah, daun, serangga)
-  deskripsi: Orang utan adalah primata besar yang terkenal cerdas dan hidup di pepohonan.
+  deskripsi: Orang utan adalah kera besar yang sangat pintar dan suka bergelantungan
+    di pohon.
   suaraHewan: {fileID: 8300000, guid: 6d559b2da095d924ab08ab7b617fbf60, type: 3}

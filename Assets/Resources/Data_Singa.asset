@@ -18,6 +18,5 @@ MonoBehaviour:
   habitat: Savana
   asal: Afrika
   makanan: Karnivora (daging)
-  deskripsi: Singa dikenal sebagai raja hutan dan hidup dalam kelompok yang disebut
-    pride.
+  deskripsi: Singa disebut raja hutan karena tubuhnya kuat dan berani.
   suaraHewan: {fileID: 8300000, guid: f22404da7d4b52d4d9e9dd6157dbfe57, type: 3}

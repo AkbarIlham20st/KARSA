@@ -18,7 +18,7 @@ MonoBehaviour:
   habitat: Hutan Bakau dan Rawa Air Tawar
   asal: Pulau Kalimantan
   makanan: Pucuk daun muda (terutama mangrove/bakau), buah-buahan, dan biji-bijian.
-  deskripsi: Bekantan, kahau, kera belanda atau monyet belanda adalah jenis monyet
-    berhidung panjang dengan rambut berwarna hitam kemerahan. Bekantan merupakan
-    hewan endemik pulau Kalimantan yang tersebar di hutan, rawa dan hutan pantai.
+  deskripsi: Bekantan adalah monyet unik dari Pulau Kalimantan yang terkenal dengan
+    hidung panjang dan perut buncitnya. Karena hidungnya yang besar, hewan ini sering
+    dijuluki "monyet Belanda". Mereka sangat suka berenang dan memakan dedaunan.
   suaraHewan: {fileID: 8300000, guid: faf7c59b488e500409b9d330cc269269, type: 3}

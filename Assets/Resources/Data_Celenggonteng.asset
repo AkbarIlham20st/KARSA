@@ -18,6 +18,6 @@ MonoBehaviour:
   habitat: Hutan tropis, rawa, padang rumput
   asal: Asia Tenggara
   makanan: Omnivora (umbi, buah, serangga)
-  deskripsi: Celeng gonteng adalah babi liar dengan tubuh besar dan taring tajam
-    yang hidup berkelompok di alam liar.
+  deskripsi: Celeng gonteng adalah babi liar yang suka mencari makanan di hutan menggunakan
+    hidungnya.
   suaraHewan: {fileID: 8300000, guid: c3d487455eedbf44592d173c22bc9213, type: 3}

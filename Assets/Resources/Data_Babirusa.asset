@@ -18,8 +18,7 @@ MonoBehaviour:
   habitat: Hutan Hujan Tropis
   asal: Sulawesi dan Maluku
   makanan: buah-buahan, umbi-umbian, daun, jamur, serta serangga
-  deskripsi: Babi rusa adalah marga binatang yang termasuk kerabat babi liar. Hewan
-    ini memiliki taring panjang yang mencuat dan melengkung di atas moncongnya. Babi
-    rusa hidup berkelompok di daerah rawa-rawa dan semak-semak. Mereka aktif mencari
-    makan pada malam hari dan beristirahat pada siang hari.
+  deskripsi: Babi rusa adalah hewan unik asli Indonesia yang terlihat seperti karakter
+    dongeng. Mereka dinamai "babi rusa" karena tubuhnya seperti babi, tetapi memiliki
+    taring panjang melengkung di atas hidungnya yang terlihat seperti tanduk rusa
   suaraHewan: {fileID: 8300000, guid: b4a372247af939242997be29e83e13b0, type: 3}

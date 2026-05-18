@@ -18,8 +18,8 @@ MonoBehaviour:
   habitat: Hutan Hujan Tropis
   asal: Sumatra, Jawa, Kalimantan
   makanan: Omnivora (umbi, buah, serangga)
-  deskripsi: Binturung atau Binturong adalah sejenis musang bertubuh besar, anggota
-    famili Viverridae. Beberapa dialek Melayu menyebutnya binturong, menturung atau
-    menturun. Dalam bahasa Inggris, hewan ini disebut Binturong, Malay Civet Cat,
-    Asian Bearcat, Palawan Bearcat, atau secara ringkas Bearcat.
+  deskripsi: Binturong adalah mamalia unik asal hutan Asia Tenggara yang tampak seperti
+    campuran beruang dan kucing. Hewan nokturnal ini terkenal memiliki ekor super
+    kuat yang berfungsi layaknya tangan kelima, serta bulu yang mengeluarkan aroma
+    wangi mirip seperti popcorn mentega.
   suaraHewan: {fileID: 8300000, guid: bebe771d51c4c6f489ea87abeb3ca8a6, type: 3}

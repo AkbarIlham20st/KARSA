@@ -18,6 +18,5 @@ MonoBehaviour:
   habitat: Hutan dan daerah perkotaan
   asal: Amerika Utara
   makanan: Omnivora
-  deskripsi: Rakun memiliki topeng hitam khas di wajah dan sangat pandai mencari
-    makanan.
+  deskripsi: Rakun adalah hewan kecil dengan wajah seperti memakai topeng hitam.
   suaraHewan: {fileID: 8300000, guid: 1e1552a0e3a37d841993828668579bac, type: 3}
