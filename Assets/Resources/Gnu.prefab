@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5589056716898370070
+--- !u!1001 &7377231978583824634
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 95ab2604cb1b2bc469c9624a367d0de6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.63272
+      value: 197.70966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95ab2604cb1b2bc469c9624a367d0de6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.22782
+      value: 383.2058
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95ab2604cb1b2bc469c9624a367d0de6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.86595
+      value: 2.96017
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 95ab2604cb1b2bc469c9624a367d0de6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48,10 +48,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7676612043611361953, guid: 95ab2604cb1b2bc469c9624a367d0de6, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 2964510c14bb8ff49a312b30cd943ef9, type: 2}
     - target: {fileID: 919132149155446097, guid: 95ab2604cb1b2bc469c9624a367d0de6, type: 3}
       propertyPath: m_Name
       value: Gnu
@@ -62,21 +58,21 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 95ab2604cb1b2bc469c9624a367d0de6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8626912305989836743}
+      addedObject: {fileID: 8056944771560449616}
   m_SourcePrefab: {fileID: 100100000, guid: 95ab2604cb1b2bc469c9624a367d0de6, type: 3}
---- !u!1 &4706605384955084615 stripped
+--- !u!1 &7683238494699333035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 95ab2604cb1b2bc469c9624a367d0de6, type: 3}
-  m_PrefabInstance: {fileID: 5589056716898370070}
+  m_PrefabInstance: {fileID: 7377231978583824634}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &8626912305989836743
+--- !u!95 &8056944771560449616
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4706605384955084615}
+  m_GameObject: {fileID: 7683238494699333035}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 637d3470b0b92074aa2bf0548dd175d6, type: 2}

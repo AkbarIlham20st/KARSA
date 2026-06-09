@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8212408108073778188
+--- !u!1001 &8386061512062979030
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.63272
+      value: 203.42723
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.22782
+      value: 377.77472
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.86595
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48,13 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7676612043611361953, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: e86884b9870fe5742bda91bb8ef03370, type: 2}
     - target: {fileID: 919132149155446097, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
       propertyPath: m_Name
       value: Monyet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62,21 +62,21 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1009892713888188838}
+      addedObject: {fileID: 8185329328819679501}
   m_SourcePrefab: {fileID: 100100000, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
---- !u!1 &9023309815116153181 stripped
+--- !u!1 &8691999312057202311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 76d83e7c8be7fb740bc854b4eef19f56, type: 3}
-  m_PrefabInstance: {fileID: 8212408108073778188}
+  m_PrefabInstance: {fileID: 8386061512062979030}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1009892713888188838
+--- !u!95 &8185329328819679501
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9023309815116153181}
+  m_GameObject: {fileID: 8691999312057202311}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 68713079bd2c3354c9108befd88cb2eb, type: 2}

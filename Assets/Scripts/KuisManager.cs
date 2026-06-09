@@ -45,7 +45,7 @@ public class KuisManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(60f);
 
             if (!kuisSedangMuncul && daftarSoal.Count > 0)
             {
